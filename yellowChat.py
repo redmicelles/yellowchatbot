@@ -9,11 +9,11 @@ warnings.filterwarnings('ignore')
 # import spacy
 lemmatizer = nltk.stem.WordNetLemmatizer()
 # Download required NLTK data
-# nltk.download('stopwords') # ----------- python -m nltk.downloader stopwords
-# nltk.download('punkt') # --------------- python -m nltk.downloader punkt
-# nltk.download('wordnet') # ------------- python -m nltk.downloader wordnet
+nltk.download('stopwords') # ----------- python -m nltk.downloader stopwords
+nltk.download('punkt') # --------------- python -m nltk.downloader punkt
+nltk.download('wordnet') # ------------- python -m nltk.downloader wordnet
 
-df = pd.read_csv("Mental_Health_FAQ.csv", na_filter=False)
+df = pd.read_csv("./Dataset/Mental_Health_FAQ.csv", na_filter=False)
 df = df[['Questions', 'Answers']]
 
 
@@ -159,7 +159,7 @@ st.markdown("<h6 style = 'text-align: center; top-margin: 0rem; color: #64CCC5'>
 
 st.markdown("<br> <br>", unsafe_allow_html= True)
 col1, col2 = st.columns(2)
-col1.image('pngwing.com-4.png', caption = 'Mental Health Related Chats')
+col1.image('./pngwing.png', caption = 'Mental Health Related Chats')
 
 history = []
 st.sidebar.markdown("<h2 style = 'text-align: center; top-margin: 0rem; color: #64CCC5'>Chat History</h2>", unsafe_allow_html = True)
